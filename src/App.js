@@ -8,8 +8,8 @@ import RecipeDetails from "./components/RecipeDetails";
 import Favorites from "./components/Favorites";
 import GroceryList from "./components/GroceryList";
 import Footer from "./components/Footer";
-import NotFoundPage from "./components/NotFoundPage";  
-import ContactPage from "./components/ContactPage";  
+import NotFoundPage from "./components/NotFoundPage";
+import ContactPage from "./components/ContactPage";
 import "./style.css";
 
 const App = () => {
@@ -27,7 +27,9 @@ const App = () => {
   };
 
   const toggleFavorite = (recipe) => {
-    const updatedFavorites = favorites.some((fav) => fav.idMeal === recipe.idMeal)
+    const updatedFavorites = favorites.some(
+      (fav) => fav.idMeal === recipe.idMeal
+    )
       ? favorites.filter((fav) => fav.idMeal !== recipe.idMeal)
       : [...favorites, recipe];
 
@@ -57,7 +59,7 @@ const App = () => {
   const clearGroceryList = () => {
     setGroceryList([]);
   };
-
+  //allah
   useEffect(() => {
     fetchRecipes("chicken");
   }, []);
@@ -82,7 +84,10 @@ const App = () => {
             </>
           }
         />
-        <Route path="/recipe/:id" element={<RecipeDetails addToGroceryList={addToGroceryList} />} />
+        <Route
+          path="/recipe/:id"
+          element={<RecipeDetails addToGroceryList={addToGroceryList} />}
+        />
         <Route
           path="/favorites"
           element={
@@ -100,7 +105,6 @@ const App = () => {
               groceryList={groceryList}
               removeFromGroceryList={removeFromGroceryList}
               clearGroceryList={clearGroceryList}
-              
             />
           }
         />
