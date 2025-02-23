@@ -1,0 +1,148 @@
+/* Contact Page Styles */
+.contact-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.contact-main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-form-section,
+.contact-info-section {
+    flex: 1;
+    min-width: 320px;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title,
+.contact-info-title,
+.map-title {
+    text-align: center;
+    color: #34495e;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-size: 1rem;
+    color: #34495e;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #c0392b;
+}
+
+.contact-info-item {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}
+
+.contact-map {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.map-frame {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    border-radius: 8px;
+    border: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .contact-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form-section,
+    .contact-info-section {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-form-section,
+    .contact-info-section {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .contact-info-item {
+        font-size: 0.9rem;
+    }
+
+    .map-frame {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-section,
+    .contact-info-section {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .contact-title {
+        font-size: 1.2rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        font-size: 0.9rem;
+    }
+
+    .form-button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .map-frame {
+        height: 250px;
+    }
+}

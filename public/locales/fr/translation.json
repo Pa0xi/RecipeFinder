@@ -1,0 +1,27 @@
+{
+    "navbar": {
+      "title": "Recette Finder 🍽️",
+      "home": "🏠 Accueil",
+      "favorites": "❤️ Favoris",
+      "darkMode": "Basculer Mode Sombre 🌙"
+    },
+    "recipeCard": {
+      "viewRecipe": "Voir la Recette",
+      "addFavorite": "🤍 Ajouter aux Favoris",
+      "removeFavorite": "❤️ Retirer des Favoris"
+    },
+    "recipeDetails": {
+      "category": "Catégorie",
+      "area": "Région",
+      "ingredients": "Ingrédients",
+      "instructions": "Instructions",
+      "watchOnYouTube": "Regarder sur YouTube 📺"
+    },
+    "favorites": {
+      "title": "Vos Recettes Favorites",
+      "noFavorites": "Pas encore de favoris. Commencez à en ajouter ! ❤️"
+    },
+    "loading": {
+      "message": "Chargement des délicieuses recettes... 🍳"
+    }
+  }
