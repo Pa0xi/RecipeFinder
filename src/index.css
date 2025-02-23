@@ -1,0 +1,14 @@
+/* Global dark mode styles */
+body.dark-mode {
+    background-color: #222;
+    color: white;
+  }
+  
+  body.dark-mode .navbar {
+    background-color: #111;
+    color: white;
+  }
+  
+  body.dark-mode .recipe-list {
+    background-color: #333;
+  }

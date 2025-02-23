@@ -1,0 +1,221 @@
+.recipe-title {
+  position: relative;
+  z-index: 2;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: white;
+  -webkit-text-stroke: 2px black; /* WebKit browsers */
+  text-shadow: 0px 1px 19px rgb(255, 255, 255); /* Fallback for non-WebKit browsers */
+}
+/* Recipe Card Styles */
+.recipe-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  max-width: 100%;
+  margin: 10px auto;
+  box-shadow: 0 4px 8px rgba(221, 20, 20, 0.1);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Background blur effect */
+.recipe-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+/* Ensure text and buttons are above the blur */
+.recipe-category, .button-container {
+  position: relative;
+  z-index: 2;
+  
+}
+
+/* Recipe Image */
+.recipe-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
+
+.recipe-category {
+  font-size: 1rem;
+  color: #b9afaf;
+  margin-bottom: 15px;
+  -webkit-text-stroke: .4px rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgb(0, 0, 0)
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.view-recipe, .favorite-btn, .grocery-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-recipe {
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+}
+
+.view-recipe:hover {
+  background-color: #0056b3;
+}
+
+.favorite-btn.add-favorite {
+  background-color: #28a745;
+  color: white;
+}
+
+.favorite-btn.add-favorite:hover {
+  background-color: #218838;
+}
+
+.favorite-btn.remove-favorite {
+  background-color: #dc3545;
+  color: white;
+}
+
+.favorite-btn.remove-favorite:hover {
+  background-color: #c82333;
+}
+
+/* Grocery Button Styles */
+.grocery-btn.add-grocery {
+  background-color: #e1eb21;
+  color: black;
+}
+
+.grocery-btn.add-grocery:hover {
+  background-color: #cad31e;
+}
+
+.grocery-btn.remove-grocery {
+  background-color: #dc3545;
+  color: white;
+}
+
+.grocery-btn.remove-grocery:hover {
+  background-color: #c82333;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .recipe-card {
+  background-color: #444;
+  color: white;
+}
+
+body.dark-mode .recipe-title {
+  color: rgb(221, 218, 218);
+  -webkit-text-stroke: 2px black; /* Black outline */
+}
+
+body.dark-mode .recipe-category {
+  color: #ddd;
+}
+
+body.dark-mode .view-recipe {
+  background-color: #555;
+}
+
+body.dark-mode .view-recipe:hover {
+  background-color: #666;
+}
+
+body.dark-mode .grocery-btn.add-grocery {
+  background-color: #ecec1ff3;
+}
+
+body.dark-mode .grocery-btn.add-grocery:hover {
+  background-color: #cdcd14;
+}
+
+body.dark-mode .grocery-btn.remove-grocery {
+  background-color: #dc3545;
+}
+
+body.dark-mode .grocery-btn.remove-grocery:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .recipe-card {
+    max-width: 90%;
+    padding: 12px;
+  }
+  .recipe-title {
+    font-size: 1.4rem;
+  }
+  .view-recipe, .favorite-btn, .grocery-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .recipe-card {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+  .button-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .view-recipe, .favorite-btn, .grocery-btn {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recipe-card {
+    padding: 10px;
+  }
+  .recipe-title {
+    font-size: 1.2rem;
+  }
+  .recipe-category {
+    font-size: 0.9rem;
+  }
+  .view-recipe, .favorite-btn, .grocery-btn {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}

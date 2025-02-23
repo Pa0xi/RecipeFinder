@@ -1,0 +1,127 @@
+/* Grocery List Container */
+.grocery-list-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Grocery List */
+.grocery-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.grocery-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s ease;
+}
+
+.grocery-item:last-child {
+  border-bottom: none;
+}
+
+/* Buttons */
+.remove-btn {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #ff4500;
+  transform: scale(1.05);
+}
+
+/* Clear Button */
+.clear-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.clear-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.02);
+}
+
+/* Dark Mode */
+body.dark-mode .grocery-list-container {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark-mode .grocery-item {
+  border-bottom: 1px solid #555;
+}
+
+body.dark-mode .remove-btn {
+  background-color: #ff6347;
+}
+
+body.dark-mode .remove-btn:hover {
+  background-color: #ff4500;
+}
+
+body.dark-mode .clear-btn {
+  background-color: #e74c3c;
+}
+
+body.dark-mode .clear-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grocery-list-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+  .grocery-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .remove-btn {
+    padding: 8px 15px;
+  }
+  .clear-btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grocery-list-container {
+    padding: 10px;
+  }
+  .remove-btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+  .clear-btn {
+    font-size: 0.85rem;
+    padding: 6px;
+  }
+}
