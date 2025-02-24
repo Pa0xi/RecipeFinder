@@ -25,7 +25,7 @@ const App = () => {
     );
     setRecipes(res.data.meals || []);
   };
-
+//slm mou3ad kys
   const toggleFavorite = (recipe) => {
     const updatedFavorites = favorites.some((fav) => fav.idMeal === recipe.idMeal)
       ? favorites.filter((fav) => fav.idMeal !== recipe.idMeal)
