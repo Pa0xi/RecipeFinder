@@ -57,7 +57,6 @@ const App = () => {
   const clearGroceryList = () => {
     setGroceryList([]);
   };
-
   useEffect(() => {
     fetchRecipes("chicken");
   }, []);
